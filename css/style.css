@@ -96,6 +96,7 @@ header {
   align-items: center;
   text-align: center;
   padding: 3em 1.5em;
+  padding-bottom: 8rem;
   gap: 2em;
 }
 
@@ -392,6 +393,48 @@ input[type="submit"]:hover {
   background-color: gray;
   color: white;
   cursor: pointer;
+}
+
+
+.passion-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: black;
+}
+
+.passion-card {
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.passion-card:hover {
+  transform: translateY(-5px);
+}
+
+.passion-card img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.passion-card h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: black;
+}
+
+.passion-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -913,5 +956,16 @@ html {
   padding: 10px;
   background-color: white;
 }
+
+.passion-gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.passion-card {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
 
 }
