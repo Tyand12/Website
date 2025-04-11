@@ -11,12 +11,15 @@
   <header>
     <a href="#main-content" class="skip" tabindex="0">Skip to Main Content</a>
     <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/CRANE.png" width="20%" alt="Logo">
-        </a>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/CRANE.png" alt="Logo" />
+          </a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
       </div>
-      <ul>
+      <ul class="nav-links">
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="passions.html">Passions</a></li>
         <li><a href="experience.html">Experience</a></li>
@@ -73,6 +76,21 @@ The way I see it, all we have is now. Spreading the light inside of us and makin
 
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    nav.classList.toggle('nav-open');
+  });
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) {
+      nav.classList.remove('nav-open');
+    }
+  });
+  nav.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 </script>
 
 </body>
