@@ -96,7 +96,8 @@ header {
   align-items: center;
   text-align: center;
   padding: 3em 1.5em;
-  padding-bottom: 8rem;
+  padding-bottom: 9rem;
+  padding-top: 9rem;
   gap: 2em;
 }
 
