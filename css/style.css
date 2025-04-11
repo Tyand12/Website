@@ -285,7 +285,15 @@ html {
   opacity: 1;
 }
 
+.gallery-item:focus::before {
+  opacity: 1;
+}
+
 .gallery-item:hover img {
+  opacity: 0;
+}
+
+.gallery-item:focus img {
   opacity: 0;
 }
 
@@ -304,11 +312,11 @@ html {
   pointer-events: none;
 }
 
-.gallery-item:hover .overlay-text {
+.gallery-item:hover .overlay-text, .gallery-item:focus .overlay-text {
   opacity: 1;
 }
 
-.gallery-item:hover {
+.gallery-item:hover, .gallery-item:focus {
   border: 2px solid white;
 }
 
