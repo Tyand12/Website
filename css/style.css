@@ -4,6 +4,10 @@ body {
   color: #000;
 }
 
+:focus{
+  outline: none;
+  border: 2px solid orange;
+}
 
 header {
   background: white;
